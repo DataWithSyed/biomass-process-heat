@@ -54,7 +54,7 @@ streams, H2/O2 flows and electricity. Operating strategies are pluggable agents 
 |---|---|---|---|
 | 1 | [biomass-process-heat](https://github.com/DataWithSyed/biomass-process-heat) (this repo) | overview, architecture, roadmap, [methods notes](docs/methods.md), [scenarios](docs/scenarios.md), final report | in progress |
 | 2 | [biomass-heat-plant-model](https://github.com/DataWithSyed/biomass-heat-plant-model) | modular agent-based plant model, mass and energy balances, gas quality, O2/H2 demand | v0.1 done |
-| 3 | `biomass-heat-electrolysis-dispatch` | price-dependent electrolysis and H2/O2 storage strategies on real German day-ahead prices | planned |
+| 3 | [biomass-heat-electrolysis-dispatch](https://github.com/DataWithSyed/biomass-heat-electrolysis-dispatch) | price-dependent electrolysis and H2/O2 storage strategies on real German day-ahead prices | v0.1 done |
 | 4 | `biomass-heat-lcoh` | LCOH, natural gas + EU ETS comparison, sensitivity, Monte Carlo, tornado charts | planned |
 | 5 | `biomass-heat-scenarios` | industrial process requirement scenarios and configuration screening | planned |
 | 6 | `biomass-heat-dashboard` | interactive Streamlit UI to select and compare process chains | planned |
@@ -62,7 +62,7 @@ streams, H2/O2 flows and electricity. Operating strategies are pluggable agents 
 
 - [x] **1. Umbrella repo**: README, architecture, roadmap, methods/literature notes, scenario definitions (2026-11-05)
 - [x] **2. Plant model** [`biomass-heat-plant-model`](https://github.com/DataWithSyed/biomass-heat-plant-model): agents, gasifier (air/oxyfuel/steam), cleaning, methanation (none/partial/full), electrolyser, H2/O2 storage, ASU, burner, market; design-point and hourly simulation; 33 tests (2026-11-05)
-- [ ] **3. Electrolysis dispatch** `biomass-heat-electrolysis-dispatch`: real DE-LU day-ahead prices (Energy-Charts / SMARD), follow-demand vs price-threshold vs optimised (LP) electrolyser + storage operation, electrolyser/storage sizing
+- [x] **3. Electrolysis dispatch** [`biomass-heat-electrolysis-dispatch`](https://github.com/DataWithSyed/biomass-heat-electrolysis-dispatch): real DE-LU day-ahead prices (Energy-Charts / SMARD, CC BY 4.0), O1 follow-demand / O2 price-threshold / O3 perfect-foresight LP / O4 rolling day-ahead; at 1.5× electrolyser + 24 h storage O3 cuts electricity cost ~23 % vs O1 (oxy_full 268 → 206 EUR/MWh_heat; O4 recovers 93–98 %); oversizing is the main lever (1× barely helps); 9 tests (2026-11-06)
 - [ ] **4. LCOH** `biomass-heat-lcoh`: CAPEX/OPEX models, annuity-based LCOH, natural gas + EU ETS CO2 cost, break-even CO2 price, sensitivity, Monte Carlo, tornado charts
 - [ ] **5. Scenarios and screening** `biomass-heat-scenarios`: process requirement scenarios (temperature, load profile, gas quality limits), feasibility filter and ranking of chains
 - [ ] **6. Dashboard** `biomass-heat-dashboard`: Streamlit app for picking and comparing chains
@@ -83,6 +83,24 @@ With full methanation the fuel comes close to natural gas. The electrolyser then
 4.4 times the O2 the gasifier needs. See the
 [plant-model README](https://github.com/DataWithSyed/biomass-heat-plant-model) for the
 assumptions and limitations.
+
+## Dispatch results (electrolysis repo, DE-LU day-ahead 2025-10-30 → 2026-10-30)
+
+At **1.5 × electrolyser + 24 h H2/O2 storage**, perfect-foresight LP (O3) cuts electricity
+cost by about **23 %** vs follow-demand across the three electrolyser configs; rolling
+day-ahead (O4) recovers 93–98 % of that. At 1.0 × capacity the saving is &lt; 1 % — storage
+alone is not enough; oversizing is the lever (oxy_full O3: 266 → 179 EUR/MWh_heat from
+1× to 2×). Mean DA price 110.8 EUR/MWh; O3 volume-weighted purchase ~85 EUR/MWh_el.
+
+| Config | O1 | O3 | O4 | O3 VWAP |
+|---|---|---|---|---|
+| oxy_none_elec | 98.4 | 75.4 | 77.0 | 85.0 |
+| oxy_partial | 210.1 | 162.3 | 165.8 | 85.7 |
+| oxy_full | 268.1 | 206.1 | 210.5 | 85.3 |
+
+All figures EUR/MWh_heat except VWAP (EUR/MWh_el). Details in the
+[dispatch README](https://github.com/DataWithSyed/biomass-heat-electrolysis-dispatch).
+
 
 ## Repository layout
 
