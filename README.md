@@ -55,7 +55,7 @@ streams, H2/O2 flows and electricity. Operating strategies are pluggable agents 
 | 1 | [biomass-process-heat](https://github.com/DataWithSyed/biomass-process-heat) (this repo) | overview, architecture, roadmap, [methods notes](docs/methods.md), [scenarios](docs/scenarios.md), final report | in progress |
 | 2 | [biomass-heat-plant-model](https://github.com/DataWithSyed/biomass-heat-plant-model) | modular agent-based plant model, mass and energy balances, gas quality, O2/H2 demand | v0.1 done |
 | 3 | [biomass-heat-electrolysis-dispatch](https://github.com/DataWithSyed/biomass-heat-electrolysis-dispatch) | price-dependent electrolysis and H2/O2 storage strategies on real German day-ahead prices | v0.1 done |
-| 4 | `biomass-heat-lcoh` | LCOH, natural gas + EU ETS comparison, sensitivity, Monte Carlo, tornado charts | planned |
+| 4 | [biomass-heat-lcoh](https://github.com/DataWithSyed/biomass-heat-lcoh) | LCOH, natural gas + EU ETS comparison, break-even CO2, sensitivity, Monte Carlo, tornado charts | v0.1 done |
 | 5 | `biomass-heat-scenarios` | industrial process requirement scenarios and configuration screening | planned |
 | 6 | `biomass-heat-dashboard` | interactive Streamlit UI to select and compare process chains | planned |
 | 7 | this repo, `report/` | final write-up of results | planned |
@@ -63,7 +63,7 @@ streams, H2/O2 flows and electricity. Operating strategies are pluggable agents 
 - [x] **1. Umbrella repo**: README, architecture, roadmap, methods/literature notes, scenario definitions (2026-11-05)
 - [x] **2. Plant model** [`biomass-heat-plant-model`](https://github.com/DataWithSyed/biomass-heat-plant-model): agents, gasifier (air/oxyfuel/steam), cleaning, methanation (none/partial/full), electrolyser, H2/O2 storage, ASU, burner, market; design-point and hourly simulation; 33 tests (2026-11-05)
 - [x] **3. Electrolysis dispatch** [`biomass-heat-electrolysis-dispatch`](https://github.com/DataWithSyed/biomass-heat-electrolysis-dispatch): real DE-LU day-ahead prices (Energy-Charts / SMARD, CC BY 4.0), O1 follow-demand / O2 price-threshold / O3 perfect-foresight LP / O4 rolling day-ahead; at 1.5× electrolyser + 24 h storage O3 cuts electricity cost ~23 % vs O1 (oxy_full 268 → 206 EUR/MWh_heat; O4 recovers 93–98 %); oversizing is the main lever (1× barely helps); 9 tests (2026-11-06)
-- [ ] **4. LCOH** `biomass-heat-lcoh`: CAPEX/OPEX models, annuity-based LCOH, natural gas + EU ETS CO2 cost, break-even CO2 price, sensitivity, Monte Carlo, tornado charts
+- [x] **4. LCOH** [`biomass-heat-lcoh`](https://github.com/DataWithSyed/biomass-heat-lcoh): CAPEX/O&M scaled from GoBiGas cost data (Thunman 2019), electrolyser (Schmidt 2017), storage/methanation (Götz 2016), EUR 2025 via HICP; annuity LCOH vs natural gas (Eurostat DE I4) + EUA (DEHSt); break-even CO2/gas price, LCOH-optimal electrolyser sizing, tornado, 10k Monte Carlo, scale sweep; at 10 MW the cheapest chain (DFB) is 268 vs 123 EUR/MWh for gas, break-even CO2 ≈ 450 EUR/t; 19 tests (2026-11-07)
 - [ ] **5. Scenarios and screening** `biomass-heat-scenarios`: process requirement scenarios (temperature, load profile, gas quality limits), feasibility filter and ranking of chains
 - [ ] **6. Dashboard** `biomass-heat-dashboard`: Streamlit app for picking and comparing chains
 - [ ] **7. Final report** in this repo (`report/`)
@@ -101,6 +101,28 @@ alone is not enough; oversizing is the lever (oxy_full O3: 266 → 179 EUR/MWh_h
 All figures EUR/MWh_heat except VWAP (EUR/MWh_el). Details in the
 [dispatch README](https://github.com/DataWithSyed/biomass-heat-electrolysis-dispatch).
 
+
+## LCOH results (LCOH repo, 10 MW / 1000 degC, EUR 2025)
+
+Natural gas in the same furnace costs **122.7 EUR/MWh_heat** (Eurostat DE I4 2026-S1
+44.1 EUR/MWh_GCV excl. taxes, plus EUA 76 EUR/t). CAPEX is scaled from GoBiGas cost data, which
+makes it a conservative, first-of-a-kind basis. The electrolyser chains are sized at their
+LCOH-optimal point on rolling day-ahead dispatch (2.5×, 24 h).
+
+| Chain | LCOH EUR/MWh_heat | Break-even CO2 EUR/t | Integrated site* |
+|---|---|---|---|
+| Steam gasification (DFB) | **268** | **453** | 207 / 295 EUR/t |
+| Oxyfuel, O2 from ASU | 282 | 490 | 221 / 332 |
+| Oxyfuel, electrolyser O2, H2 blended | 329 | 610 | 275 / 470 |
+| Air gasification | 330 | 612 | 261 / 436 |
+| Oxyfuel + partial methanation | 555 | 1197 | 463 / 958 |
+| Oxyfuel + full methanation | 575 | 1249 | 491 / 1029 |
+
+\*Auxiliary/project costs and staff halved (assumption). At 10 MW no chain beats gas in any
+of 10,000 Monte Carlo draws (CO2 50–200 EUR/t). Electrolytic H2 for methanation roughly
+doubles the cost at 2025-26 German power prices. Scale is the main lever: at 100 MW of heat
+DFB reaches 144 EUR/MWh (break-even 131 EUR/t), or 129 EUR/MWh (93 EUR/t) on an integrated
+site. Details in the [LCOH README](https://github.com/DataWithSyed/biomass-heat-lcoh).
 
 ## Repository layout
 

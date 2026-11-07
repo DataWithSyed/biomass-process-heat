@@ -101,7 +101,7 @@ cited in `biomass-heat-lcoh`.
 
 * German/Luxembourg day-ahead prices: Energy-Charts (Fraunhofer ISE) API and SMARD
   (Bundesnetzagentur). Licence terms will be checked and cited in the dispatch repo.
-* EU ETS allowance prices: public sources to be identified and cited in the LCOH repo.
+* EU ETS allowance prices: DEHSt German auction reports (H1 2026 average 76.02 EUR/t), cited in the LCOH repo. Natural gas: Eurostat `nrg_pc_203` (CC BY 4.0). Wood chips: C.A.R.M.E.N. e.V. price survey (individual figures cited). Cost data and all sources: `biomass-heat-lcoh` docs/cost_basis.md.
 * Thermodynamic data: GRI-Mech 3.0 NASA polynomials (via Cantera's `gri30.yaml`).
 
 ## References

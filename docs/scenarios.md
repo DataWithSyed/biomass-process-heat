@@ -49,11 +49,11 @@ Price data: real DE-LU day-ahead prices *(to be sourced, Energy-Charts / SMARD, 
 |---|---|---|---|---|
 | Discount rate (real) | 5 % | 7 % | 10 % | assumption |
 | Lifetime | 20 years | | | assumption |
-| EU ETS CO2 price | 50 EUR/t | 100 EUR/t | 200 EUR/t | assumption range; historical series to be sourced |
-| Natural gas price (wholesale) | | | | to be sourced |
-| Wood chip price | | | | to be sourced |
-| Electrolyser / gasifier / methanation CAPEX | | | | to be sourced from published cost studies |
-| Electricity price | historical day-ahead years | | | to be sourced |
+| EU ETS CO2 price | 50 EUR/t | 76 EUR/t (DEHSt H1 2026) | 200 EUR/t | central cited, range assumption [LCOH repo] |
+| Natural gas price (DE, band I4, excl. taxes) | 21.2 (2019-S2) | 44.1 (2026-S1) | 62.8 (2022-S2) EUR/MWh_GCV | Eurostat nrg_pc_203 [LCOH repo] |
+| Wood chip price (net) | 24.1 | 30.3 | 41.0 EUR/MWh | Thunman 2019 (escalated) / C.A.R.M.E.N. 2025 DE / north [LCOH repo] |
+| Electrolyser / gasifier / methanation CAPEX | | | | Schmidt 2017 / Thunman 2019 / Götz 2016, see LCOH repo docs/cost_basis.md |
+| Electricity price | ×0.7 | DE-LU DA 2025-10-30 → 2026-10-30 (mean 110.8) | ×1.3 | Energy-Charts CC BY 4.0 [dispatch + LCOH repos] |
 
 ## 5. Outputs per scenario
 
