@@ -2,9 +2,13 @@
 
 Scenarios combine a **process requirement** (what the industrial user needs) with a
 **plant configuration** (which chain supplies it) and an **economic setting**. Values marked
-*(assumption)* are illustrative screening values chosen by the author. Values marked *(to
-be sourced)* will be replaced with cited data in the repo named in brackets. No value here is
+*(assumption)* are illustrative screening values chosen by the author. No value here is
 a measured plant figure.
+
+The runnable screen is [`scenarios/`](../scenarios/) in this repository (import name
+`bhscenarios`, distribution name `biomass-heat-scenarios`). The roadmap name is not a
+separate repository. Results and the fuel-gas screen are in
+[`scenarios/results/ranking.md`](../scenarios/results/ranking.md).
 
 ## 1. Process requirement scenarios
 
@@ -16,10 +20,19 @@ a measured plant figure.
 | P4 | Very-high-temperature furnace | 1300 degC | 10 MW | continuous | T_ad and Wobbe close to natural gas (burner retrofit-free) |
 
 All entries are *(assumption)*: temperatures and duties for screening, not data from a
-specific site. Load profiles are generated synthetically and labelled as such. The gas
-quality limits for "retrofit-free" use (Wobbe band, relative density, minimum CH4/maximum
-H2) are *(to be sourced)* from public natural-gas quality rules, e.g. the DVGW G 260 gas
-families in Germany [scenarios repo].
+specific site. Load profiles are generated synthetically and labelled as such.
+
+The temperature comparison uses **8000 h/y** for every continuous case, the full-load
+hours already fixed in the LCOH model. P1 is also run at the **8760 h** written in the
+table above, so that calendar-year assumption is not mixed into the temperature comparison.
+P2 uses **4160 h** = 16 h × 5 d × 52 wk, with no public holidays. P3 and P4 are the
+1000 °C and 1300 °C rows of the 8000 h series.
+
+The fuel-gas screen uses the published EASEE-gas CBP 2005-001/02 gross Wobbe band
+(13.60–15.81 kWh/m³, combustion 25 °C, volume 0 °C) and relative density 0.555–0.700.
+Hydrogen limits are screening assumptions: the CBP gives none. DVGW G 260 is not applied.
+The screen is not a compliance check and not a burner certificate. See
+[`scenarios/docs/assumptions.md`](../scenarios/docs/assumptions.md).
 
 ## 2. Plant configurations (implemented in `biomass-heat-plant-model`)
 
@@ -41,7 +54,7 @@ families in Germany [scenarios repo].
 | O3 | Optimised (perfect foresight) | LP minimising electricity cost with storage and capacity limits, as an upper bound |
 | O4 | Optimised (rolling, day-ahead) | O3 re-solved daily with only day-ahead prices known |
 
-Price data: real DE-LU day-ahead prices *(to be sourced, Energy-Charts / SMARD, with licence)*.
+Price data: DE-LU day-ahead prices, Energy-Charts / SMARD, CC BY 4.0, used in the dispatch and LCOH repositories. The screening step does not re-solve that dispatch.
 
 ## 4. Economic scenarios [LCOH repo]
 
@@ -57,6 +70,12 @@ Price data: real DE-LU day-ahead prices *(to be sourced, Energy-Charts / SMARD, 
 
 ## 5. Outputs per scenario
 
-LCOH (EUR/MWh_heat) per chain and strategy; gap to natural gas plus CO2; break-even CO2
-price; biomass and electricity use per MWh_heat; avoided fossil CO2; feasibility flags (T_ad,
-Wobbe, available heat at process temperature).
+Produced by `scenarios/` (step 5), not by a separate repository.
+
+LCOH (EUR/MWh_heat) per chain; gap to natural gas; break-even CO2 price at the same
+flue-exit temperature; biomass and electricity per MWh_heat; direct fossil stack CO2
+and biogenic stack CO2, reported separately from lifecycle emissions (lifecycle GHG is
+not estimated); thermal feasibility (`T_ad` against process temperature, available heat
+against flue-exit temperature) and the Wobbe / density screen. Electrolyser chains on
+the two-shift load are marked provisional because the day-ahead dispatch was not
+re-solved for that shape.

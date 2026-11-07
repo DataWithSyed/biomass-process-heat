@@ -1,0 +1,372 @@
+config,label,t_flue_c,t_ad_c,available_heat_frac
+steam_dfb,Allothermal steam gasification (DFB),200,1864.7781658446415,0.9229882856823672
+steam_dfb,Allothermal steam gasification (DFB),225,1864.7781658446415,0.911363097009817
+steam_dfb,Allothermal steam gasification (DFB),250,1864.7781658446415,0.8996574275566206
+steam_dfb,Allothermal steam gasification (DFB),275,1864.7781658446415,0.8878705082647873
+steam_dfb,Allothermal steam gasification (DFB),300,1864.7781658446415,0.876001518297974
+steam_dfb,Allothermal steam gasification (DFB),325,1864.7781658446415,0.8640496145384032
+steam_dfb,Allothermal steam gasification (DFB),350,1864.7781658446415,0.852013961083779
+steam_dfb,Allothermal steam gasification (DFB),375,1864.7781658446415,0.8398937587442001
+steam_dfb,Allothermal steam gasification (DFB),400,1864.7781658446415,0.82768827453908
+steam_dfb,Allothermal steam gasification (DFB),425,1864.7781658446415,0.8153968711940579
+steam_dfb,Allothermal steam gasification (DFB),450,1864.7781658446415,0.8030190366379181
+steam_dfb,Allothermal steam gasification (DFB),475,1864.7781658446415,0.7905544134995046
+steam_dfb,Allothermal steam gasification (DFB),500,1864.7781658446415,0.7780028286046368
+steam_dfb,Allothermal steam gasification (DFB),525,1864.7781658446415,0.7653643224730252
+steam_dfb,Allothermal steam gasification (DFB),550,1864.7781658446415,0.752639178815187
+steam_dfb,Allothermal steam gasification (DFB),575,1864.7781658446415,0.7398279540293626
+steam_dfb,Allothermal steam gasification (DFB),600,1864.7781658446415,0.7269315066984311
+steam_dfb,Allothermal steam gasification (DFB),625,1864.7781658446415,0.7139510270868256
+steam_dfb,Allothermal steam gasification (DFB),650,1864.7781658446415,0.7008880666374491
+steam_dfb,Allothermal steam gasification (DFB),675,1864.7781658446415,0.6877445674685918
+steam_dfb,Allothermal steam gasification (DFB),700,1864.7781658446415,0.6745228918708442
+steam_dfb,Allothermal steam gasification (DFB),725,1864.7781658446415,0.6612258518040146
+steam_dfb,Allothermal steam gasification (DFB),750,1864.7781658446415,0.6478573528284589
+steam_dfb,Allothermal steam gasification (DFB),775,1864.7781658446415,0.63442032175467
+steam_dfb,Allothermal steam gasification (DFB),800,1864.7781658446415,0.6209162577768296
+steam_dfb,Allothermal steam gasification (DFB),825,1864.7781658446415,0.6073465833539844
+steam_dfb,Allothermal steam gasification (DFB),850,1864.7781658446415,0.5937126972324072
+steam_dfb,Allothermal steam gasification (DFB),875,1864.7781658446415,0.5800159746504024
+steam_dfb,Allothermal steam gasification (DFB),900,1864.7781658446415,0.5662577675431097
+steam_dfb,Allothermal steam gasification (DFB),925,1864.7781658446415,0.5524394047473101
+steam_dfb,Allothermal steam gasification (DFB),950,1864.7781658446415,0.5385621922062301
+steam_dfb,Allothermal steam gasification (DFB),975,1864.7781658446415,0.5246274131743475
+steam_dfb,Allothermal steam gasification (DFB),1000,1864.7781658446415,0.5106363284221959
+steam_dfb,Allothermal steam gasification (DFB),1025,1864.7781658446415,0.49659017644116915
+steam_dfb,Allothermal steam gasification (DFB),1050,1864.7781658446415,0.4824901736483282
+steam_dfb,Allothermal steam gasification (DFB),1075,1864.7781658446415,0.46833751459120254
+steam_dfb,Allothermal steam gasification (DFB),1100,1864.7781658446415,0.45413337215259925
+steam_dfb,Allothermal steam gasification (DFB),1125,1864.7781658446415,0.4398788977554045
+steam_dfb,Allothermal steam gasification (DFB),1150,1864.7781658446415,0.425575221567392
+steam_dfb,Allothermal steam gasification (DFB),1175,1864.7781658446415,0.41122345270602434
+steam_dfb,Allothermal steam gasification (DFB),1200,1864.7781658446415,0.39682467944325966
+steam_dfb,Allothermal steam gasification (DFB),1225,1864.7781658446415,0.38237996941035735
+steam_dfb,Allothermal steam gasification (DFB),1250,1864.7781658446415,0.3678903698026817
+steam_dfb,Allothermal steam gasification (DFB),1275,1864.7781658446415,0.3533569075845078
+steam_dfb,Allothermal steam gasification (DFB),1300,1864.7781658446415,0.3387805896938254
+steam_dfb,Allothermal steam gasification (DFB),1325,1864.7781658446415,0.3241624032471454
+steam_dfb,Allothermal steam gasification (DFB),1350,1864.7781658446415,0.3095033157443033
+steam_dfb,Allothermal steam gasification (DFB),1375,1864.7781658446415,0.29480427527326475
+steam_dfb,Allothermal steam gasification (DFB),1400,1864.7781658446415,0.2800662107149312
+steam_dfb,Allothermal steam gasification (DFB),1425,1864.7781658446415,0.26529003194794354
+steam_dfb,Allothermal steam gasification (DFB),1450,1864.7781658446415,0.25047663005348825
+steam_dfb,Allothermal steam gasification (DFB),1475,1864.7781658446415,0.23562687752010184
+steam_dfb,Allothermal steam gasification (DFB),1500,1864.7781658446415,0.22074162844847522
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",200,1807.1068164654075,0.9208593374815169
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",225,1807.1068164654075,0.908834626744147
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",250,1807.1068164654075,0.8967179622173184
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",275,1807.1068164654075,0.8845093763413832
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",300,1807.1068164654075,0.8722088091135783
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",325,1807.1068164654075,0.859816138079487
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",350,1807.1068164654075,0.8473312083245015
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",375,1807.1068164654075,0.8347538624652807
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",400,1807.1068164654075,0.8220839706412133
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",425,1807.1068164654075,0.8093214605058787
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",450,1807.1068164654075,0.7964663472185068
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",475,1807.1068164654075,0.7835187634354406
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",500,1807.1068164654075,0.7704789893015958
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",525,1807.1068164654075,0.7573474824419226
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",550,1807.1068164654075,0.7441249079528661
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",575,1807.1068164654075,0.7308121683938273
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",600,1807.1068164654075,0.7174104337786251
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",625,1807.1068164654075,0.7039211715669558
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",650,1807.1068164654075,0.6903461766558545
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",675,1807.1068164654075,0.6766876013711581
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",700,1807.1068164654075,0.6629479854589626
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",725,1807.1068164654075,0.6491302860770859
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",750,1807.1068164654075,0.63523880982951
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",775,1807.1068164654075,0.6212769857742498
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",800,1807.1068164654075,0.6072464412261409
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",825,1807.1068164654075,0.5931487213754613
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",850,1807.1068164654075,0.5789853431837584
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",875,1807.1068164654075,0.5647577956646537
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",900,1807.1068164654075,0.5504675401646485
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",925,1807.1068164654075,0.5361160106439291
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",950,1807.1068164654075,0.5217046139571735
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",975,1807.1068164654075,0.5072347301343563
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",1000,1807.1068164654075,0.492707712661555
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",1025,1807.1068164654075,0.4781248887617544
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",1050,1807.1068164654075,0.4634875596756546
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",1075,1807.1068164654075,0.4487970009424735
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",1100,1807.1068164654075,0.43405446268075565
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",1125,1807.1068164654075,0.4192611698691754
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",1150,1807.1068164654075,0.40441832262734484
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",1175,1807.1068164654075,0.38952709649661804
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",1200,1807.1068164654075,0.37458864272089487
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",1225,1807.1068164654075,0.3596040885274322
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",1250,1807.1068164654075,0.3445745374076434
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",1275,1807.1068164654075,0.32950106939790863
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",1300,1807.1068164654075,0.3143847413603773
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",1325,1807.1068164654075,0.2992265872637758
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",1350,1807.1068164654075,0.2840276184642125
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",1375,1807.1068164654075,0.26878882398598286
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",1400,1807.1068164654075,0.2535111708023762
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",1425,1807.1068164654075,0.23819560411648028
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",1450,1807.1068164654075,0.2228430476419883
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",1475,1807.1068164654075,0.20745440388400319
+oxy_none,"Oxyfuel, no methanation (O2 from ASU)",1500,1807.1068164654075,0.1920305544198436
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",200,1882.3641655262559,0.9239689948208596
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",225,1882.3641655262559,0.9124727139739359
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",250,1882.3641655262559,0.9008965982352101
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",275,1882.3641655262559,0.8892398892671302
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",300,1882.3641655262559,0.8775017806286325
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",325,1882.3641655262559,0.8656814463341915
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",350,1882.3641655262559,0.8537780694128683
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",375,1882.3641655262559,0.8417908704673581
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",400,1882.3641655262559,0.8297191362330403
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",425,1882.3641655262559,0.8175622481370267
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",450,1882.3641655262559,0.8053197108572103
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",475,1882.3641655262559,0.792991180881314
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",500,1882.3641655262559,0.7805764950659401
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",525,1882.3641655262559,0.7680756991956175
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",550,1882.3641655262559,0.7554890765418522
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",575,1882.3641655262559,0.7428171764221744
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",600,1882.3641655262559,0.7300608427591885
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",625,1882.3641655262559,0.7172212426396214
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",650,1882.3641655262559,0.7042998948733715
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",675,1882.3641655262559,0.691298698552557
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",700,1882.3641655262559,0.6782199616105647
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",725,1882.3641655262559,0.665066429381099
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",750,1882.3641655262559,0.6518419270613752
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",775,1882.3641655262559,0.638549340265927
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",800,1882.3641655262559,0.6251901511862723
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",825,1882.3641655262559,0.6117657666720553
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",850,1882.3641655262559,0.598277570273773
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",875,1882.3641655262559,0.5847269224419159
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",900,1882.3641655262559,0.5711151607261071
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",925,1882.3641655262559,0.5574435999742436
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",950,1882.3641655262559,0.5437135325316367
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",975,1882.3641655262559,0.5299262284401512
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",1000,1882.3641655262559,0.5160829356373479
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",1025,1882.3641655262559,0.502184880155621
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",1050,1882.3641655262559,0.48823326632134234
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",1075,1882.3641655262559,0.4742292769539977
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",1100,1882.3641655262559,0.46017407356532986
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",1125,1882.3641655262559,0.4460687965584777
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",1150,1882.3641655262559,0.4319145654271179
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",1175,1882.3641655262559,0.4177124789546041
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",1200,1882.3641655262559,0.40346361541310627
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",1225,1882.3641655262559,0.38916903276275444
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",1250,1882.3641655262559,0.37482976885077546
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",1275,1882.3641655262559,0.36044684161063606
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",1300,1882.3641655262559,0.3460212492611808
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",1325,1882.3641655262559,0.33155397050577473
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",1350,1882.3641655262559,0.31704596473144253
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",1375,1882.3641655262559,0.30249817220800834
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",1400,1882.3641655262559,0.28791151428723794
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",1425,1882.3641655262559,0.27328689360197705
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",1450,1882.3641655262559,0.2586251942652933
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",1475,1882.3641655262559,0.24392728206961586
+oxy_none_elec,"Oxyfuel, no methanation (O2 from electrolyser, H2 blended)",1500,1882.3641655262559,0.22919400468587525
+air,Air gasification,200,1530.3572102211415,0.9043301099059938
+air,Air gasification,225,1530.3572102211415,0.8896729372963708
+air,Air gasification,250,1530.3572102211415,0.874913818689116
+air,Air gasification,275,1530.3572102211415,0.860052180401762
+air,Air gasification,300,1530.3572102211415,0.8450873099305254
+air,Air gasification,325,1530.3572102211415,0.8300184030195319
+air,Air gasification,350,1530.3572102211415,0.8148446107300404
+air,Air gasification,375,1530.3572102211415,0.7995650865096637
+air,Air gasification,400,1530.3572102211415,0.784179033261594
+air,Air gasification,425,1530.3572102211415,0.7686857504138256
+air,Air gasification,450,1530.3572102211415,0.7530846809883772
+air,Air gasification,475,1530.3572102211415,0.7373754586705172
+air,Air gasification,500,1530.3572102211415,0.7215579548779854
+air,Air gasification,525,1530.3572102211415,0.7056323258302171
+air,Air gasification,550,1530.3572102211415,0.6895990596175658
+air,Air gasification,575,1530.3572102211415,0.673459023270528
+air,Air gasification,600,1530.3572102211415,0.6572135098289642
+air,Air gasification,625,1530.3572102211415,0.6408642854113241
+air,Air gasification,650,1530.3572102211415,0.6244136362838697
+air,Air gasification,675,1530.3572102211415,0.6078644159298979
+air,Air gasification,700,1530.3572102211415,0.5912200921189639
+air,Air gasification,725,1530.3572102211415,0.5744847939761045
+air,Air gasification,750,1530.3572102211415,0.5576641518159432
+air,Air gasification,775,1530.3572102211415,0.5407621766589773
+air,Air gasification,800,1530.3572102211415,0.5237808046192375
+air,Air gasification,825,1530.3572102211415,0.5067218652804691
+air,Air gasification,850,1530.3572102211415,0.4895871541754244
+air,Air gasification,875,1530.3572102211415,0.4723784331295972
+air,Air gasification,900,1530.3572102211415,0.45509743060495944
+air,Air gasification,925,1530.3572102211415,0.43774584204369776
+air,Air gasification,950,1530.3572102211415,0.42032533021195007
+air,Air gasification,975,1530.3572102211415,0.4028375255435414
+air,Air gasification,1000,1530.3572102211415,0.3852840264837202
+air,Air gasification,1025,1530.3572102211415,0.3676663998328956
+air,Air gasification,1050,1530.3572102211415,0.3499861810903732
+air,Air gasification,1075,1530.3572102211415,0.33224487479808984
+air,Air gasification,1100,1530.3572102211415,0.31444395488435256
+air,Air gasification,1125,1530.3572102211415,0.2965848650075734
+air,Air gasification,1150,1530.3572102211415,0.2786690189000071
+air,Air gasification,1175,1530.3572102211415,0.2606978007114856
+air,Air gasification,1200,1530.3572102211415,0.24267256535315412
+air,Air gasification,1225,1530.3572102211415,0.22459463884121067
+air,Air gasification,1250,1530.3572102211415,0.2064653186406388
+air,Air gasification,1275,1530.3572102211415,0.18828587400894675
+air,Air gasification,1300,1530.3572102211415,0.17005754633990122
+air,Air gasification,1325,1530.3572102211415,0.15178154950726597
+air,Air gasification,1350,1530.3572102211415,0.1334590702085366
+air,Air gasification,1375,1530.3572102211415,0.11509126830867786
+air,Air gasification,1400,1530.3572102211415,0.09667927718385892
+air,Air gasification,1425,1530.3572102211415,0.0782242040651912
+air,Air gasification,1450,1530.3572102211415,0.05972713038246362
+air,Air gasification,1475,1530.3572102211415,0.041189112107879226
+air,Air gasification,1500,1530.3572102211415,0.022611180099791125
+oxy_partial,Oxyfuel + partial methanation (50 % H2),200,1822.3312278505414,0.9189748601640875
+oxy_partial,Oxyfuel + partial methanation (50 % H2),225,1822.3312278505414,0.9069590864183659
+oxy_partial,Oxyfuel + partial methanation (50 % H2),250,1822.3312278505414,0.8948671445248689
+oxy_partial,Oxyfuel + partial methanation (50 % H2),275,1822.3312278505414,0.8826978739670183
+oxy_partial,Oxyfuel + partial methanation (50 % H2),300,1822.3312278505414,0.8704500350397879
+oxy_partial,Oxyfuel + partial methanation (50 % H2),325,1822.3312278505414,0.8581223476942387
+oxy_partial,Oxyfuel + partial methanation (50 % H2),350,1822.3312278505414,0.8457135303820572
+oxy_partial,Oxyfuel + partial methanation (50 % H2),375,1822.3312278505414,0.8332223389000895
+oxy_partial,Oxyfuel + partial methanation (50 % H2),400,1822.3312278505414,0.8206476052348783
+oxy_partial,Oxyfuel + partial methanation (50 % H2),425,1822.3312278505414,0.8079882764071998
+oxy_partial,Oxyfuel + partial methanation (50 % H2),450,1822.3312278505414,0.7952434533165986
+oxy_partial,Oxyfuel + partial methanation (50 % H2),475,1822.3312278505414,0.782412429585925
+oxy_partial,Oxyfuel + partial methanation (50 % H2),500,1822.3312278505414,0.7694947304058716
+oxy_partial,Oxyfuel + partial methanation (50 % H2),525,1822.3312278505414,0.7564901513795073
+oxy_partial,Oxyfuel + partial methanation (50 % H2),550,1822.3312278505414,0.7433987973668167
+oxy_partial,Oxyfuel + partial methanation (50 % H2),575,1822.3312278505414,0.7302211213292338
+oxy_partial,Oxyfuel + partial methanation (50 % H2),600,1822.3312278505414,0.7169579631741789
+oxy_partial,Oxyfuel + partial methanation (50 % H2),625,1822.3312278505414,0.7036105885995964
+oxy_partial,Oxyfuel + partial methanation (50 % H2),650,1822.3312278505414,0.6901807279384884
+oxy_partial,Oxyfuel + partial methanation (50 % H2),675,1822.3312278505414,0.6766706150034532
+oxy_partial,Oxyfuel + partial methanation (50 % H2),700,1822.3312278505414,0.6630830259312199
+oxy_partial,Oxyfuel + partial methanation (50 % H2),725,1822.3312278505414,0.6494213180271857
+oxy_partial,Oxyfuel + partial methanation (50 % H2),750,1822.3312278505414,0.635689909522249
+oxy_partial,Oxyfuel + partial methanation (50 % H2),775,1822.3312278505414,0.6218917736398526
+oxy_partial,Oxyfuel + partial methanation (50 % H2),800,1822.3312278505414,0.6080284309035738
+oxy_partial,Oxyfuel + partial methanation (50 % H2),825,1822.3312278505414,0.5941013165081437
+oxy_partial,Oxyfuel + partial methanation (50 % H2),850,1822.3312278505414,0.5801118406693094
+oxy_partial,Oxyfuel + partial methanation (50 % H2),875,1822.3312278505414,0.5660613888525994
+oxy_partial,Oxyfuel + partial methanation (50 % H2),900,1822.3312278505414,0.551951322002087
+oxy_partial,Oxyfuel + partial methanation (50 % H2),925,1822.3312278505414,0.5377829767691558
+oxy_partial,Oxyfuel + partial methanation (50 % H2),950,1822.3312278505414,0.5235576657412636
+oxy_partial,Oxyfuel + partial methanation (50 % H2),975,1822.3312278505414,0.5092766776707076
+oxy_partial,Oxyfuel + partial methanation (50 % H2),1000,1822.3312278505414,0.49494127770338836
+oxy_partial,Oxyfuel + partial methanation (50 % H2),1025,1822.3312278505414,0.48055270760757457
+oxy_partial,Oxyfuel + partial methanation (50 % H2),1050,1822.3312278505414,0.4661121860026682
+oxy_partial,Oxyfuel + partial methanation (50 % H2),1075,1822.3312278505414,0.45162090858796816
+oxy_partial,Oxyfuel + partial methanation (50 % H2),1100,1822.3312278505414,0.43708004837143494
+oxy_partial,Oxyfuel + partial methanation (50 % H2),1125,1822.3312278505414,0.42249075589845597
+oxy_partial,Oxyfuel + partial methanation (50 % H2),1150,1822.3312278505414,0.4078541594806099
+oxy_partial,Oxyfuel + partial methanation (50 % H2),1175,1822.3312278505414,0.39317136542443093
+oxy_partial,Oxyfuel + partial methanation (50 % H2),1200,1822.3312278505414,0.37844345826017217
+oxy_partial,Oxyfuel + partial methanation (50 % H2),1225,1822.3312278505414,0.36367150097057316
+oxy_partial,Oxyfuel + partial methanation (50 % H2),1250,1822.3312278505414,0.34885653521962173
+oxy_partial,Oxyfuel + partial methanation (50 % H2),1275,1822.3312278505414,0.33399958158132037
+oxy_partial,Oxyfuel + partial methanation (50 % H2),1300,1822.3312278505414,0.3191016397684486
+oxy_partial,Oxyfuel + partial methanation (50 % H2),1325,1822.3312278505414,0.30416368886133044
+oxy_partial,Oxyfuel + partial methanation (50 % H2),1350,1822.3312278505414,0.289186687536597
+oxy_partial,Oxyfuel + partial methanation (50 % H2),1375,1822.3312278505414,0.2741715742959506
+oxy_partial,Oxyfuel + partial methanation (50 % H2),1400,1822.3312278505414,0.25911926769493154
+oxy_partial,Oxyfuel + partial methanation (50 % H2),1425,1822.3312278505414,0.2440306665716804
+oxy_partial,Oxyfuel + partial methanation (50 % H2),1450,1822.3312278505414,0.22890665027570448
+oxy_partial,Oxyfuel + partial methanation (50 % H2),1475,1822.3312278505414,0.21374807889664102
+oxy_partial,Oxyfuel + partial methanation (50 % H2),1500,1822.3312278505414,0.19855579349302113
+oxy_full,Oxyfuel + full methanation,200,1915.7996569929178,0.9227448340983525
+oxy_full,Oxyfuel + full methanation,225,1915.7996569929178,0.9113606719991083
+oxy_full,Oxyfuel + full methanation,250,1915.7996569929178,0.8999110825343678
+oxy_full,Oxyfuel + full methanation,275,1915.7996569929178,0.8883943766055424
+oxy_full,Oxyfuel + full methanation,300,1915.7996569929178,0.8768088106143986
+oxy_full,Oxyfuel + full methanation,325,1915.7996569929178,0.865152624993867
+oxy_full,Oxyfuel + full methanation,350,1915.7996569929178,0.8534240827388532
+oxy_full,Oxyfuel + full methanation,375,1915.7996569929178,0.8416215079370463
+oxy_full,Oxyfuel + full methanation,400,1915.7996569929178,0.8297433242997302
+oxy_full,Oxyfuel + full methanation,425,1915.7996569929178,0.8177880936925922
+oxy_full,Oxyfuel + full methanation,450,1915.7996569929178,0.8057545546665332
+oxy_full,Oxyfuel + full methanation,475,1915.7996569929178,0.7936416609884782
+oxy_full,Oxyfuel + full methanation,500,1915.7996569929178,0.7814486201721855
+oxy_full,Oxyfuel + full methanation,525,1915.7996569929178,0.7691749320090562
+oxy_full,Oxyfuel + full methanation,550,1915.7996569929178,0.7568204270989445
+oxy_full,Oxyfuel + full methanation,575,1915.7996569929178,0.7443853053809679
+oxy_full,Oxyfuel + full methanation,600,1915.7996569929178,0.7318701746643165
+oxy_full,Oxyfuel + full methanation,625,1915.7996569929178,0.7192760891590625
+oxy_full,Oxyfuel + full methanation,650,1915.7996569929178,0.7066045880069711
+oxy_full,Oxyfuel + full methanation,675,1915.7996569929178,0.6938577338123101
+oxy_full,Oxyfuel + full methanation,700,1915.7996569929178,0.6810381511726579
+oxy_full,Oxyfuel + full methanation,725,1915.7996569929178,0.6681490652097161
+oxy_full,Oxyfuel + full methanation,750,1915.7996569929178,0.655194555207852
+oxy_full,Oxyfuel + full methanation,775,1915.7996569929178,0.6421771728627949
+oxy_full,Oxyfuel + full methanation,800,1915.7996569929178,0.6290983049255322
+oxy_full,Oxyfuel + full methanation,825,1915.7996569929178,0.6159592580581797
+oxy_full,Oxyfuel + full methanation,850,1915.7996569929178,0.6027613175420243
+oxy_full,Oxyfuel + full methanation,875,1915.7996569929178,0.5895057474530944
+oxy_full,Oxyfuel + full methanation,900,1915.7996569929178,0.5761937908377284
+oxy_full,Oxyfuel + full methanation,925,1915.7996569929178,0.5628266698881451
+oxy_full,Oxyfuel + full methanation,950,1915.7996569929178,0.5494055861180133
+oxy_full,Oxyfuel + full methanation,975,1915.7996569929178,0.5359317205380207
+oxy_full,Oxyfuel + full methanation,1000,1915.7996569929178,0.5224062338314445
+oxy_full,Oxyfuel + full methanation,1025,1915.7996569929178,0.5088302665297196
+oxy_full,Oxyfuel + full methanation,1050,1915.7996569929178,0.4952049391880103
+oxy_full,Oxyfuel + full methanation,1075,1915.7996569929178,0.48153135256077717
+oxy_full,Oxyfuel + full methanation,1100,1915.7996569929178,0.4678105877773485
+oxy_full,Oxyfuel + full methanation,1125,1915.7996569929178,0.45404370651748976
+oxy_full,Oxyfuel + full methanation,1150,1915.7996569929178,0.44023175118697294
+oxy_full,Oxyfuel + full methanation,1175,1915.7996569929178,0.42637574509314585
+oxy_full,Oxyfuel + full methanation,1200,1915.7996569929178,0.4124766926205009
+oxy_full,Oxyfuel + full methanation,1225,1915.7996569929178,0.3985355794062476
+oxy_full,Oxyfuel + full methanation,1250,1915.7996569929178,0.3845533725158786
+oxy_full,Oxyfuel + full methanation,1275,1915.7996569929178,0.370531020618742
+oxy_full,Oxyfuel + full methanation,1300,1915.7996569929178,0.35646945416360887
+oxy_full,Oxyfuel + full methanation,1325,1915.7996569929178,0.3423695855542446
+oxy_full,Oxyfuel + full methanation,1350,1915.7996569929178,0.32823230932497754
+oxy_full,Oxyfuel + full methanation,1375,1915.7996569929178,0.31405850231626814
+oxy_full,Oxyfuel + full methanation,1400,1915.7996569929178,0.2998490238502797
+oxy_full,Oxyfuel + full methanation,1425,1915.7996569929178,0.2856047159064469
+oxy_full,Oxyfuel + full methanation,1450,1915.7996569929178,0.27132640329704666
+oxy_full,Oxyfuel + full methanation,1475,1915.7996569929178,0.2570148938427664
+oxy_full,Oxyfuel + full methanation,1500,1915.7996569929178,0.24267097854827344
+natural_gas,Natural gas (illustrative composition),200,1918.8055572094395,0.9228286835339289
+natural_gas,Natural gas (illustrative composition),225,1918.8055572094395,0.9114610692302165
+natural_gas,Natural gas (illustrative composition),250,1918.8055572094395,0.9000278844735374
+natural_gas,Natural gas (illustrative composition),275,1918.8055572094395,0.8885274835930353
+natural_gas,Natural gas (illustrative composition),300,1918.8055572094395,0.8769581618207164
+natural_gas,Natural gas (illustrative composition),325,1918.8055572094395,0.8653181942631835
+natural_gas,Natural gas (illustrative composition),350,1918.8055572094395,0.853605874873372
+natural_gas,Natural gas (illustrative composition),375,1918.8055572094395,0.8418195554222825
+natural_gas,Natural gas (illustrative composition),400,1918.8055572094395,0.8299576844707153
+natural_gas,Natural gas (illustrative composition),425,1918.8055572094395,0.8180188463410057
+natural_gas,Natural gas (illustrative composition),450,1918.8055572094395,0.8060018000887574
+natural_gas,Natural gas (illustrative composition),475,1918.8055572094395,0.7939055184745774
+natural_gas,Natural gas (illustrative composition),500,1918.8055572094395,0.7817292269358099
+natural_gas,Natural gas (illustrative composition),525,1918.8055572094395,0.7694724425582713
+natural_gas,Natural gas (illustrative composition),550,1918.8055572094395,0.7571350130479834
+natural_gas,Natural gas (illustrative composition),575,1918.8055572094395,0.7447171557029086
+natural_gas,Natural gas (illustrative composition),600,1918.8055572094395,0.7322194963846841
+natural_gas,Natural gas (illustrative composition),625,1918.8055572094395,0.7196431084903562
+natural_gas,Natural gas (illustrative composition),650,1918.8055572094395,0.7069895519241144
+natural_gas,Natural gas (illustrative composition),675,1918.8055572094395,0.6942609120690264
+natural_gas,Natural gas (illustrative composition),700,1918.8055572094395,0.6814598387587711
+natural_gas,Natural gas (illustrative composition),725,1918.8055572094395,0.668589585249374
+natural_gas,Natural gas (illustrative composition),750,1918.8055572094395,0.6556542703373625
+natural_gas,Natural gas (illustrative composition),775,1918.8055572094395,0.6426564701795844
+natural_gas,Natural gas (illustrative composition),800,1918.8055572094395,0.6295975737823036
+natural_gas,Natural gas (illustrative composition),825,1918.8055572094395,0.6164788895739863
+natural_gas,Natural gas (illustrative composition),850,1918.8055572094395,0.6033017043134808
+natural_gas,Natural gas (illustrative composition),875,1918.8055572094395,0.5900672832717927
+natural_gas,Natural gas (illustrative composition),900,1918.8055572094395,0.5767768704138614
+natural_gas,Natural gas (illustrative composition),925,1918.8055572094395,0.5634316885803363
+natural_gas,Natural gas (illustrative composition),950,1918.8055572094395,0.5500329396693523
+natural_gas,Natural gas (illustrative composition),975,1918.8055572094395,0.5365818048183059
+natural_gas,Natural gas (illustrative composition),1000,1918.8055572094395,0.5230794445856316
+natural_gas,Natural gas (illustrative composition),1025,1918.8055572094395,0.5095269991325776
+natural_gas,Natural gas (illustrative composition),1050,1918.8055572094395,0.495925588404982
+natural_gas,Natural gas (illustrative composition),1075,1918.8055572094395,0.48227631231504803
+natural_gas,Natural gas (illustrative composition),1100,1918.8055572094395,0.46858025092312083
+natural_gas,Natural gas (illustrative composition),1125,1918.8055572094395,0.45483846461946337
+natural_gas,Natural gas (illustrative composition),1150,1918.8055572094395,0.44105199430603276
+natural_gas,Natural gas (illustrative composition),1175,1918.8055572094395,0.42722186157825554
+natural_gas,Natural gas (illustrative composition),1200,1918.8055572094395,0.4133490689068029
+natural_gas,Natural gas (illustrative composition),1225,1918.8055572094395,0.39943459981936946
+natural_gas,Natural gas (illustrative composition),1250,1918.8055572094395,0.3854794190824463
+natural_gas,Natural gas (illustrative composition),1275,1918.8055572094395,0.37148447288309905
+natural_gas,Natural gas (illustrative composition),1300,1918.8055572094395,0.3574506890107421
+natural_gas,Natural gas (illustrative composition),1325,1918.8055572094395,0.34337897703891646
+natural_gas,Natural gas (illustrative composition),1350,1918.8055572094395,0.32927022850706444
+natural_gas,Natural gas (illustrative composition),1375,1918.8055572094395,0.31512531710230574
+natural_gas,Natural gas (illustrative composition),1400,1918.8055572094395,0.30094509884121406
+natural_gas,Natural gas (illustrative composition),1425,1918.8055572094395,0.2867304122515929
+natural_gas,Natural gas (illustrative composition),1450,1918.8055572094395,0.27248207855425144
+natural_gas,Natural gas (illustrative composition),1475,1918.8055572094395,0.25820090184478034
+natural_gas,Natural gas (illustrative composition),1500,1918.8055572094395,0.24388766927532748
