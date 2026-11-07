@@ -104,11 +104,32 @@ cited in `biomass-heat-lcoh`.
 * EU ETS allowance prices: DEHSt German auction reports (H1 2026 average 76.02 EUR/t), cited in the LCOH repo. Natural gas: Eurostat `nrg_pc_203` (CC BY 4.0). Wood chips: C.A.R.M.E.N. e.V. price survey (individual figures cited). Cost data and all sources: `biomass-heat-lcoh` docs/cost_basis.md.
 * Thermodynamic data: GRI-Mech 3.0 NASA polynomials (via Cantera's `gri30.yaml`).
 
+## 10. Scenario screening
+
+The screening step (`scenarios/` in this repository) ranks the chains at 300, 800,
+1000 and 1300 °C. Those four temperatures are screening choices in
+[docs/scenarios.md](scenarios.md), not a binning taken from Naegler or Madeddu.
+Available heat is recomputed from the plant-model burner at the flue-gas exit
+temperature. Process temperature is compared with the adiabatic flame temperature
+and is not used as a rescale factor on the 1000 °C LCOH.
+
+Fuel gases are compared with the gross Wobbe and relative-density ranges in
+EASEE-gas CBP 2005-001/02. That comparison is a screening filter. It is not a
+determination of regulatory compliance or burner certification. The CBP states
+that its band applies at insignificant hydrogen and gives no hydrogen limit;
+the numeric hydrogen cuts used in the screen are labelled as assumptions in
+`scenarios/docs/assumptions.md`.
+
+Break-even CO2 in the screen uses the natural-gas intensity at the case flue
+temperature. Lifecycle greenhouse-gas emissions are outside this calculation.
+Direct fossil stack CO2 and biogenic stack CO2 are reported as separate columns.
+
 ## References
 
 * Basu, P. (2018). *Biomass Gasification, Pyrolysis and Torrefaction: Practical Design and Theory*, 3rd ed. Academic Press.
 * Buttler, A., Spliethoff, H. (2018). Current status of water electrolysis for energy storage, grid balancing and sector coupling via power-to-gas and power-to-liquids: A review. *Renewable and Sustainable Energy Reviews* 82, 2440-2454. https://doi.org/10.1016/j.rser.2017.09.003
 * Channiwala, S.A., Parikh, P.P. (2002). A unified correlation for estimating HHV of solid, liquid and gaseous fuels. *Fuel* 81(8), 1051-1063. https://doi.org/10.1016/S0016-2361(01)00131-4
+* EASEE-gas (2008). Common Business Practice 2005-001/02: Harmonisation of Natural Gas Quality. Approved by the Executive Committee on 6 November 2008. https://easee-gas.eu/_files/cbp/16_cbp-2005-001-02-harmonisation-of-natural-gas-quality.pdf
 * Götz, M., Lefebvre, J., Mörs, F., et al. (2016). Renewable Power-to-Gas: A technological and economic review. *Renewable Energy* 85, 1371-1390. https://doi.org/10.1016/j.renene.2015.07.066
 * Higman, C., van der Burgt, M. (2008). *Gasification*, 2nd ed. Gulf Professional Publishing.
 * Kazil, J., Masad, D., Crooks, A. (2020). Utilizing Python for Agent-Based Modeling: The Mesa Framework. In *Social, Cultural, and Behavioral Modeling* (SBP-BRiMS 2020), LNCS, 308-317. https://doi.org/10.1007/978-3-030-61255-9_30

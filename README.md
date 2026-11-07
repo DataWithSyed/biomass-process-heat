@@ -56,7 +56,7 @@ streams, H2/O2 flows and electricity. Operating strategies are pluggable agents 
 | 2 | [biomass-heat-plant-model](https://github.com/DataWithSyed/biomass-heat-plant-model) | modular agent-based plant model, mass and energy balances, gas quality, O2/H2 demand | v0.1 done |
 | 3 | [biomass-heat-electrolysis-dispatch](https://github.com/DataWithSyed/biomass-heat-electrolysis-dispatch) | price-dependent electrolysis and H2/O2 storage strategies on real German day-ahead prices | v0.1 done |
 | 4 | [biomass-heat-lcoh](https://github.com/DataWithSyed/biomass-heat-lcoh) | LCOH, natural gas + EU ETS comparison, break-even CO2, sensitivity, Monte Carlo, tornado charts | v0.1 done |
-| 5 | `biomass-heat-scenarios` | industrial process requirement scenarios and configuration screening | planned |
+| 5 | `scenarios/` in this repo (package `biomass-heat-scenarios`; no separate repository) | industrial process temperatures, load, fuel-gas screen, LCOH rank vs natural gas | v0.1 done |
 | 6 | `biomass-heat-dashboard` | interactive Streamlit UI to select and compare process chains | planned |
 | 7 | this repo, `report/` | final write-up of results | planned |
 
@@ -64,8 +64,8 @@ streams, H2/O2 flows and electricity. Operating strategies are pluggable agents 
 - [x] **2. Plant model** [`biomass-heat-plant-model`](https://github.com/DataWithSyed/biomass-heat-plant-model): agents, gasifier (air/oxyfuel/steam), cleaning, methanation (none/partial/full), electrolyser, H2/O2 storage, ASU, burner, market; design-point and hourly simulation; 33 tests (2026-11-05)
 - [x] **3. Electrolysis dispatch** [`biomass-heat-electrolysis-dispatch`](https://github.com/DataWithSyed/biomass-heat-electrolysis-dispatch): real DE-LU day-ahead prices (Energy-Charts / SMARD, CC BY 4.0), O1 follow-demand / O2 price-threshold / O3 perfect-foresight LP / O4 rolling day-ahead; at 1.5× electrolyser + 24 h storage O3 cuts electricity cost ~23 % vs O1 (oxy_full 268 → 206 EUR/MWh_heat; O4 recovers 93–98 %); oversizing is the main lever (1× barely helps); 9 tests (2026-11-06)
 - [x] **4. LCOH** [`biomass-heat-lcoh`](https://github.com/DataWithSyed/biomass-heat-lcoh): CAPEX/O&M scaled from GoBiGas cost data (Thunman 2019), electrolyser (Schmidt 2017), storage/methanation (Götz 2016), EUR 2025 via HICP; annuity LCOH vs natural gas (Eurostat DE I4) + EUA (DEHSt); break-even CO2/gas price, LCOH-optimal electrolyser sizing, tornado, 10k Monte Carlo, scale sweep; at 10 MW the cheapest chain (DFB) is 268 vs 123 EUR/MWh for gas, break-even CO2 ≈ 450 EUR/t; 19 tests (2026-11-07)
-- [ ] **5. Scenarios and screening** `biomass-heat-scenarios`: process requirement scenarios (temperature, load profile, gas quality limits), feasibility filter and ranking of chains
-- [ ] **6. Dashboard** `biomass-heat-dashboard`: Streamlit app for picking and comparing chains
+- [x] **5. Scenarios and screening**, in this repo under [`scenarios/`](scenarios/) (roadmap name `biomass-heat-scenarios`; there is no separate repository): 300/800/1000/1300 °C with flue exit kept distinct from process temperature, 8000 h and a 4160 h two-shift load, EASEE-gas Wobbe/density screen, LCOH recomputed from the plant model rather than rescaled from 1000 °C; 27 tests (2026-11-07)
+- [ ] **6. Dashboard** `biomass-heat-dashboard`: Streamlit app for picking and comparing chains. Not started. No repository yet.
 - [ ] **7. Final report** in this repo (`report/`)
 - [ ] Plant-model enhancements: recuperative air preheat, DFB flue-gas heat recovery, tar/C2+ species, part-load behaviour
 
@@ -124,11 +124,50 @@ doubles the cost at 2025-26 German power prices. Scale is the main lever: at 100
 DFB reaches 144 EUR/MWh (break-even 131 EUR/t), or 129 EUR/MWh (93 EUR/t) on an integrated
 site. Details in the [LCOH README](https://github.com/DataWithSyed/biomass-heat-lcoh).
 
+## Scenario screening (this repo, `scenarios/`, 10 MW)
+
+The screen re-runs the plant-model burner balance at each flue-gas exit temperature
+and rebuilds LCOH with `bhlcoh`. It does not multiply the 1000 °C cost table by one
+factor. Flue exit equals process temperature in the ranked rows (no recuperation);
+the two temperatures are separate inputs. Costs are model estimates, not measured
+prices. Direct fossil CO2 and biogenic stack CO2 are not lifecycle emissions.
+No biomass chain passes the EASEE-gas Wobbe and density screen, and none of these
+figures is a burner certificate.
+
+At 8000 h the cheapest chain is still steam DFB, and it does not beat natural gas.
+Air gasification falls from 3rd to 4th between 800 and 1000 °C. Its available heat
+at a 1300 °C flue exit is 17 % of LHV (flame temperature about 1530 °C).
+
+| Process / flue °C | DFB | Natural gas | Gap | DFB break-even CO2 | Air (rank) |
+|---:|---:|---:|---:|---:|---|
+| 300 | 193 | 73 | 120 | 595 EUR/t | 201 (3rd) |
+| 800 | 237 | 102 | 135 | 498 | 270 (3rd) |
+| 1000 | 268 | 123 | 146 | 453 | 330 (4th) |
+| 1300 | 351 | 180 | 171 | 379 | 584 (4th) |
+
+EUR/MWh heat, rounded. The euro gap widens with temperature while the DFB
+break-even CO2 price falls, because the gas furnace's direct fossil CO2 per MWh
+rises. A two-shift year (4160 h) at 800 °C raises DFB from 237 to 391 EUR/MWh.
+Full methanation reaches a Wobbe index of 50.6 MJ/Nm³, inside the cited band, but
+relative density 0.540 is below 0.555 and the gas still contains 6.5 vol-% H2.
+
+The 1000 °C / 8000 h row matches the published LCOH totals. Electrolyser costs at
+the other temperatures scale the published O4 dispatch (2.5×, 24 h) with the
+plant-model throughput ratio; that LP was not re-solved, and two-shift electrolyser
+ranks are provisional. DFB does not use that dispatch.
+
+![Screening LCOH and available heat](scenarios/figures/lcoh_and_available_heat.png)
+
+Tables, the fuel screen and the limits of the cross-repo scaling:
+[scenarios/README.md](scenarios/README.md),
+[scenarios/results/ranking.md](scenarios/results/ranking.md).
+
 ## Repository layout
 
 ```
 docs/methods.md      literature and methods overview (verifiable references only)
 docs/scenarios.md    technical and economic scenario definitions
+scenarios/           step 5 screening package (not a separate repository)
 report/              final write-up (step 7)
 ```
 
