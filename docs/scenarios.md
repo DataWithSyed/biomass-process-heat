@@ -17,9 +17,9 @@ a measured plant figure.
 
 All entries are *(assumption)*: temperatures and duties for screening, not data from a
 specific site. Load profiles are generated synthetically and labelled as such. The gas
-quality limits for "retrofit-free" use (Wobbe band, relative density, minimum CH4/maximum
-H2) are *(to be sourced)* from public natural-gas quality rules, e.g. the DVGW G 260 gas
-families in Germany [scenarios repo].
+quality limits for "retrofit-free" use are now sourced in the scenarios repo: DVGW G 260
+(2021) group H, Wobbe index 49.0–55.4 MJ/m3, relative density 0.55–0.75, plus a 10 vol-% H2
+screening limit [scenarios repo docs/sources.md].
 
 ## 2. Plant configurations (implemented in `biomass-heat-plant-model`)
 
@@ -41,7 +41,7 @@ families in Germany [scenarios repo].
 | O3 | Optimised (perfect foresight) | LP minimising electricity cost with storage and capacity limits, as an upper bound |
 | O4 | Optimised (rolling, day-ahead) | O3 re-solved daily with only day-ahead prices known |
 
-Price data: real DE-LU day-ahead prices *(to be sourced, Energy-Charts / SMARD, with licence)*.
+Price data: real DE-LU day-ahead prices (Energy-Charts / SMARD, CC BY 4.0), 2025-10-30 → 2026-10-30 [dispatch repo].
 
 ## 4. Economic scenarios [LCOH repo]
 
