@@ -57,7 +57,7 @@ streams, H2/O2 flows and electricity. Operating strategies are pluggable agents 
 | 3 | [biomass-heat-electrolysis-dispatch](https://github.com/DataWithSyed/biomass-heat-electrolysis-dispatch) | price-dependent electrolysis and H2/O2 storage strategies on real German day-ahead prices | v0.1 done |
 | 4 | [biomass-heat-lcoh](https://github.com/DataWithSyed/biomass-heat-lcoh) | LCOH, natural gas + EU ETS comparison, break-even CO2, sensitivity, Monte Carlo, tornado charts | v0.1 done |
 | 5 | [biomass-heat-scenarios](https://github.com/DataWithSyed/biomass-heat-scenarios) | process scenarios P1–P4 (300–1300 degC, load profiles), recuperative air preheat, gas-quality feasibility filter, ranking | v0.1 done |
-| 6 | `biomass-heat-dashboard` | interactive Streamlit UI to select and compare process chains | planned |
+| 6 | [biomass-heat-dashboard](https://github.com/DataWithSyed/biomass-heat-dashboard) | interactive Streamlit UI: process requirement → feasible chains → LCOH / break-even CO2 vs natural gas, precomputed or live recompute | v0.1 done |
 | 7 | this repo, `report/` | final write-up of results | planned |
 
 - [x] **1. Umbrella repo**: README, architecture, roadmap, methods/literature notes, scenario definitions (2026-11-05)
@@ -65,7 +65,7 @@ streams, H2/O2 flows and electricity. Operating strategies are pluggable agents 
 - [x] **3. Electrolysis dispatch** [`biomass-heat-electrolysis-dispatch`](https://github.com/DataWithSyed/biomass-heat-electrolysis-dispatch): real DE-LU day-ahead prices (Energy-Charts / SMARD, CC BY 4.0), O1 follow-demand / O2 price-threshold / O3 perfect-foresight LP / O4 rolling day-ahead; at 1.5× electrolyser + 24 h storage O3 cuts electricity cost ~23 % vs O1 (oxy_full 268 → 206 EUR/MWh_heat; O4 recovers 93–98 %); oversizing is the main lever (1× barely helps); 9 tests (2026-11-06)
 - [x] **4. LCOH** [`biomass-heat-lcoh`](https://github.com/DataWithSyed/biomass-heat-lcoh): CAPEX/O&M scaled from GoBiGas cost data (Thunman 2019), electrolyser (Schmidt 2017), storage/methanation (Götz 2016), EUR 2025 via HICP; annuity LCOH vs natural gas (Eurostat DE I4) + EUA (DEHSt); break-even CO2/gas price, LCOH-optimal electrolyser sizing, tornado, 10k Monte Carlo, scale sweep; at 10 MW the cheapest chain (DFB) is 268 vs 123 EUR/MWh for gas, break-even CO2 ≈ 450 EUR/t; 19 tests (2026-11-07)
 - [x] **5. Scenarios and screening** [`biomass-heat-scenarios`](https://github.com/DataWithSyed/biomass-heat-scenarios): P1–P4 (300/800/1000/1300 degC, continuous or two-shift), with and without recuperative air preheat; rolling day-ahead electrolyser LP for time-varying demand; ASU cost and power now sourced (VTT Technology 91); DVGW G 260 H-gas limits as a gas-quality filter; DFB is cheapest wherever a burner retrofit is allowed, 1000 degC continuous is the best case (453 EUR/t), two-shift operation pushes break-even CO2 above 1,000 EUR/t, only full methanation suits a retrofit-free 1300 degC furnace; 25 tests (2026-11-08)
-- [ ] **6. Dashboard** `biomass-heat-dashboard`: Streamlit app for picking and comparing chains
+- [x] **6. Dashboard** [`biomass-heat-dashboard`](https://github.com/DataWithSyed/biomass-heat-dashboard): Streamlit app; pick P1–P4 or any temperature 300–1300 degC, load profile, burner retrofit yes/no, air preheat, cost case and price sliders; feasibility via the step-5 filter, LCOH breakdown and LCOH-vs-CO2 chart; live recompute reproduces the step-5 matrix to 1e-9; new temperature sweep: without a burner retrofit only full methanation is feasible at any temperature (about 2× the LCOH), with a retrofit break-even CO2 falls from 595 (300 degC) to 379 EUR/t (1300 degC); 20 tests incl. Streamlit AppTest (2026-11-09)
 - [ ] **7. Final report** in this repo (`report/`)
 - [ ] Plant-model enhancements: DFB flue-gas heat recovery, tar/C2+ species, part-load behaviour, flame dissociation (recuperative air preheat is now covered via the burner's air temperature in step 5)
 
@@ -140,6 +140,25 @@ Recuperation lowers every chain's cost but helps gas more in relative terms. Uti
 matters more than temperature. The sourced ASU cost (15 MEUR for 1.84 t/h) is about 3× the
 step-4 placeholder and raises the ASU oxyfuel chain from 282 to 297 EUR/MWh. Details in the
 [scenarios README](https://github.com/DataWithSyed/biomass-heat-scenarios).
+
+## Dashboard (step 6)
+
+The [dashboard](https://github.com/DataWithSyed/biomass-heat-dashboard) puts steps 2–5 behind
+one screen. The user states a process requirement and gets the feasible chains, their LCOH
+breakdown and the CO2 price at which each one would beat gas. A temperature sweep (continuous
+duty, central costs) adds two findings:
+
+| Process T | Best chain, retrofit allowed | LCOH / gas | Break-even CO2 | Retrofit-free (only oxy + full methanation) | Break-even CO2 |
+|---:|---|---:|---:|---:|---:|
+| 300 degC | steam DFB | 193 / 73 | 595 | 391 | 1,457 |
+| 800 degC | steam DFB | 237 / 102 | 498 | 500 | 1,316 |
+| 1000 degC | steam DFB | 268 / 123 | 453 | 575 | 1,249 |
+| 1300 degC | steam DFB | 351 / 180 | 379 | 777 | 1,134 |
+
+* Whether the burner may be changed matters more than any price input. Without a retrofit, the
+  cheapest LCOH roughly doubles at every temperature.
+* With a retrofit, break-even CO2 falls steadily with process temperature (cold air). With
+  recuperative preheat the fall is much flatter (625 → 539 EUR/t).
 
 ## Repository layout
 
