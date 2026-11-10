@@ -12,6 +12,25 @@ The project is a **series of public repositories**, built step by step. This umb
 holds the overview, architecture, roadmap, methods notes, scenario definitions and the
 final write-up.
 
+## Results in one page
+
+**The series is complete.** The [final report](report/README.md) brings all steps together.
+Headline findings (10 MW process heat, EUR 2025, natural gas + EUA 76 EUR/t as reference):
+
+* At 10 MW no biomass chain beats natural gas today. The cheapest, steam DFB gasification,
+  costs 268 vs 123 EUR/MWh_heat at 1000 degC and breaks even at about 450 EUR/t CO2. None of
+  10,000 Monte Carlo draws makes any chain cheaper than gas.
+* Scale and site integration are the levers: at 100 MW on an integrated site DFB reaches
+  129 EUR/MWh and breaks even at 93 EUR/t.
+* Whether the burner may be retrofitted matters more than any price input. Retrofit-free, only
+  oxyfuel + full methanation is feasible, at 2.0-2.2x the LCOH at every temperature.
+* With a retrofit, break-even CO2 falls as the process gets hotter (595 EUR/t at 300 degC to
+  379 EUR/t at 1300 degC, cold air), because gas wastes more of its heat in hot processes.
+* Price-following electrolysis cuts the electricity bill by about 23 % (rolling day-ahead
+  keeps 93 % of that), but only with an oversized electrolyser.
+
+![Levers on the cost gap](report/figures/00_levers_dfb_1000C.png)
+
 ## Why
 
 Most industrial heat above ~500 degC still comes from burning natural gas. Electrification
@@ -52,21 +71,21 @@ streams, H2/O2 flows and electricity. Operating strategies are pluggable agents 
 
 | # | Repository | Content | Status |
 |---|---|---|---|
-| 1 | [biomass-process-heat](https://github.com/DataWithSyed/biomass-process-heat) (this repo) | overview, architecture, roadmap, [methods notes](docs/methods.md), [scenarios](docs/scenarios.md), final report | in progress |
+| 1 | [biomass-process-heat](https://github.com/DataWithSyed/biomass-process-heat) (this repo) | overview, architecture, roadmap, [methods notes](docs/methods.md), [scenarios](docs/scenarios.md), final report | done |
 | 2 | [biomass-heat-plant-model](https://github.com/DataWithSyed/biomass-heat-plant-model) | modular agent-based plant model, mass and energy balances, gas quality, O2/H2 demand | v0.1 done |
 | 3 | [biomass-heat-electrolysis-dispatch](https://github.com/DataWithSyed/biomass-heat-electrolysis-dispatch) | price-dependent electrolysis and H2/O2 storage strategies on real German day-ahead prices | v0.1 done |
 | 4 | [biomass-heat-lcoh](https://github.com/DataWithSyed/biomass-heat-lcoh) | LCOH, natural gas + EU ETS comparison, break-even CO2, sensitivity, Monte Carlo, tornado charts | v0.1 done |
 | 5 | [biomass-heat-scenarios](https://github.com/DataWithSyed/biomass-heat-scenarios) | process scenarios P1–P4 (300–1300 degC, load profiles), recuperative air preheat, gas-quality feasibility filter, ranking | v0.1 done |
 | 6 | [biomass-heat-dashboard](https://github.com/DataWithSyed/biomass-heat-dashboard) | interactive Streamlit UI: process requirement → feasible chains → LCOH / break-even CO2 vs natural gas, precomputed or live recompute | v0.1 done |
-| 7 | this repo, `report/` | final write-up of results | planned |
+| 7 | this repo, [`report/`](report/README.md) | final write-up of results | done |
 
 - [x] **1. Umbrella repo**: README, architecture, roadmap, methods/literature notes, scenario definitions (2026-11-05)
 - [x] **2. Plant model** [`biomass-heat-plant-model`](https://github.com/DataWithSyed/biomass-heat-plant-model): agents, gasifier (air/oxyfuel/steam), cleaning, methanation (none/partial/full), electrolyser, H2/O2 storage, ASU, burner, market; design-point and hourly simulation; 33 tests (2026-11-05)
-- [x] **3. Electrolysis dispatch** [`biomass-heat-electrolysis-dispatch`](https://github.com/DataWithSyed/biomass-heat-electrolysis-dispatch): real DE-LU day-ahead prices (Energy-Charts / SMARD, CC BY 4.0), O1 follow-demand / O2 price-threshold / O3 perfect-foresight LP / O4 rolling day-ahead; at 1.5× electrolyser + 24 h storage O3 cuts electricity cost ~23 % vs O1 (oxy_full 268 → 206 EUR/MWh_heat; O4 recovers 93–98 %); oversizing is the main lever (1× barely helps); 9 tests (2026-11-06)
+- [x] **3. Electrolysis dispatch** [`biomass-heat-electrolysis-dispatch`](https://github.com/DataWithSyed/biomass-heat-electrolysis-dispatch): real DE-LU day-ahead prices (Energy-Charts / SMARD, CC BY 4.0), O1 follow-demand / O2 price-threshold / O3 perfect-foresight LP / O4 rolling day-ahead; at 1.5× electrolyser + 24 h storage O3 cuts electricity cost ~23 % vs O1 (oxy_full 268 → 206 EUR/MWh_heat; O4 recovers about 93 %); oversizing is the main lever (1× barely helps); 10 tests (2026-11-06; O4 SOC warm-start test and doc fix 2026-11-10)
 - [x] **4. LCOH** [`biomass-heat-lcoh`](https://github.com/DataWithSyed/biomass-heat-lcoh): CAPEX/O&M scaled from GoBiGas cost data (Thunman 2019), electrolyser (Schmidt 2017), storage/methanation (Götz 2016), EUR 2025 via HICP; annuity LCOH vs natural gas (Eurostat DE I4) + EUA (DEHSt); break-even CO2/gas price, LCOH-optimal electrolyser sizing, tornado, 10k Monte Carlo, scale sweep; at 10 MW the cheapest chain (DFB) is 268 vs 123 EUR/MWh for gas, break-even CO2 ≈ 450 EUR/t; 19 tests (2026-11-07)
 - [x] **5. Scenarios and screening** [`biomass-heat-scenarios`](https://github.com/DataWithSyed/biomass-heat-scenarios): P1–P4 (300/800/1000/1300 degC, continuous or two-shift), with and without recuperative air preheat; rolling day-ahead electrolyser LP for time-varying demand; ASU cost and power now sourced (VTT Technology 91); DVGW G 260 H-gas limits as a gas-quality filter; DFB is cheapest wherever a burner retrofit is allowed, 1000 degC continuous is the best case (453 EUR/t), two-shift operation pushes break-even CO2 above 1,000 EUR/t, only full methanation suits a retrofit-free 1300 degC furnace; 25 tests (2026-11-08)
 - [x] **6. Dashboard** [`biomass-heat-dashboard`](https://github.com/DataWithSyed/biomass-heat-dashboard): Streamlit app; pick P1–P4 or any temperature 300–1300 degC, load profile, burner retrofit yes/no, air preheat, cost case and price sliders; feasibility via the step-5 filter, LCOH breakdown and LCOH-vs-CO2 chart; live recompute reproduces the step-5 matrix to 1e-9; new temperature sweep: without a burner retrofit only full methanation is feasible at any temperature (about 2× the LCOH), with a retrofit break-even CO2 falls from 595 (300 degC) to 379 EUR/t (1300 degC); 20 tests incl. Streamlit AppTest (2026-11-09)
-- [ ] **7. Final report** in this repo (`report/`)
+- [x] **7. Final report** in this repo ([`report/`](report/README.md)): problem, method chain, key tables and figures from every step (copied with source commits), temperature-sweep finding, limitations, references (2026-11-10)
 - [ ] Plant-model enhancements: DFB flue-gas heat recovery, tar/C2+ species, part-load behaviour, flame dissociation (recuperative air preheat is now covered via the burner's air temperature in step 5)
 
 ## First results (from the plant model, 10 MW of heat at 1000 degC)
@@ -88,7 +107,7 @@ assumptions and limitations.
 
 At **1.5 × electrolyser + 24 h H2/O2 storage**, perfect-foresight LP (O3) cuts electricity
 cost by about **23 %** vs follow-demand across the three electrolyser configs; rolling
-day-ahead (O4) recovers 93–98 % of that. At 1.0 × capacity the saving is &lt; 1 % — storage
+day-ahead (O4) recovers about 93 % of that. At 1.0 × capacity the saving is &lt; 1 % — storage
 alone is not enough; oversizing is the lever (oxy_full O3: 266 → 179 EUR/MWh_heat from
 1× to 2×). Mean DA price 110.8 EUR/MWh; O3 volume-weighted purchase ~85 EUR/MWh_el.
 
@@ -151,7 +170,7 @@ duty, central costs) adds two findings:
 | Process T | Best chain, retrofit allowed | LCOH / gas | Break-even CO2 | Retrofit-free (only oxy + full methanation) | Break-even CO2 |
 |---:|---|---:|---:|---:|---:|
 | 300 degC | steam DFB | 193 / 73 | 595 | 391 | 1,457 |
-| 800 degC | steam DFB | 237 / 102 | 498 | 500 | 1,316 |
+| 800 degC | steam DFB | 237 / 102 | 498 | 499 | 1,316 |
 | 1000 degC | steam DFB | 268 / 123 | 453 | 575 | 1,249 |
 | 1300 degC | steam DFB | 351 / 180 | 379 | 777 | 1,134 |
 
@@ -165,7 +184,7 @@ duty, central costs) adds two findings:
 ```
 docs/methods.md      literature and methods overview (verifiable references only)
 docs/scenarios.md    technical and economic scenario definitions
-report/              final write-up (step 7)
+report/              final report (step 7): README.md, figures/, data/ (+ PROVENANCE.md), scripts/make_figures.py
 ```
 
 ## Licence
